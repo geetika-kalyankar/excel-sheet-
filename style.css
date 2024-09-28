@@ -23,8 +23,8 @@ body {
   align-items: center;
 }
 .selected-page-action {
-  background-color: #f1f2f6;
-  color: #218c74;
+  background-color: #d5dfe2;
+  color: #056d3e;
 }
 .cellprop-actions-cont {
   height: 3rem;
