@@ -2,32 +2,42 @@
   box-sizing: border-box;
 }
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
+
 .page-actions-cont {
   height: 3rem;
-  display: flex;
-  align-items: center;
   background-color: #056d3e;
-  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 1rem;
 }
 .page-action {
-  margin: 0.5rem;
-  color: #ffffff;
+  width: 3.5rem;
+  height: 2rem;
+  text-align: center;
+  color: #f1f2f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selected-page-action {
+  background-color: #f1f2f6;
+  color: #218c74;
 }
 .cellprop-actions-cont {
   height: 3rem;
   background-color: #d5dfe2;
   display: flex;
   align-items: center;
-  padding: 0.5rem;
+  padding-left: 1rem;
 }
 .cellprop-actions-cont > * {
   display: inline-block;
-  margin: 1rem;
+  margin-right: 1rem;
 }
-.cellprop-actions-cont > *:hover{
+.cellprop-actions-cont > *:hover {
   cursor: pointer;
 }
 .cellprop-actions-cont > select {
@@ -48,30 +58,32 @@ body {
   display: flex;
   align-items: center;
 }
-.formula-actions-cont > input{
-    border: none;
-    outline: none;
-    height: 70%;
-}
 .formula-actions-cont > * {
-    display: inline-block;
-    margin-right: 0.7rem;
+  display: inline-block;
+  margin-right: 0.7rem;
 }
-.formula-icon{
-    height: 1.2rem;
-    width: 1.3rem;
+.formula-icon {
+  height: 1.2rem;
+  width: 1.3rem;
 }
-.address-bar{
-     width: 5rem;
+.address-bar {
+  width: 5rem;
+  text-align: center;
 }
-.formula-bar{
-    width: calc(100vw - 5rem - 0.7rem - 0.7rem  - 0.7rem);
+.formula-bar {
+  width: calc( 100vw - 5rem - 0.7rem - 0.7rem - 0.7rem );
+}
+.formula-actions-cont > input {
+  border: none;
+  outline: none;
+  height: 70%;
 }
 .sheet-actions-cont {
   height: 3rem;
   display: flex;
   align-items: center;
-  padding: 0 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   gap: 1rem;
   background-color: #ecf0f1;
 }
@@ -81,54 +93,67 @@ body {
 .sheet-add-icon {
   width: 2vw;
 }
+.sheet-add-icon:hover {
+  cursor: default;
+}
+
 .sheets-folder-cont {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
   height: 80%;
   width: 5rem;
-  width: calc(100vw - 2vw);
+  width: calc( 100vw - 2vw );
+  overflow: auto;
 }
-.sheet-folder{
-    text-decoration: underline;
-    font-weight: bold;
-    text-decoration-thickness: 3px;
-    font-size: 1rem;
+.sheet-folder {
+  height: 80%;
+  text-decoration: underline;
+  font-weight: bold;
+  text-decoration-thickness: 3px;
+  font-size: 0.9rem;
+  /* background-color: lightblue; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.sheet-content {
+  width: 5rem;
+  cursor: pointer;
+}
+
 .grid-cont {
-  height: calc(100vh - 3rem - 3rem - 3rem - 2rem);
+  height: calc( 100vh - 3rem - 3rem - 2rem - 3rem );
   position: relative;
   overflow: scroll;
   background-color: #ecf0f1;
 }
 
-/* Griding section */
-.top-left-dummy-box{
+.top-left-dummy-box {
   height: 2rem;
   width: 2rem;
   background-color: #747d8c;
   position: fixed;
-  z-index: 100;
+  z-index: 4;
 }
-.address-col-cont{
+.address-col-cont {
   position: sticky;
   top: 2rem;
   left: 0;
 }
-.address-row-cont{
-  height: 2rem;
+.address-row-cont {
   display: flex;
   position: sticky;
   top: 0;
   left: 2rem;
-  z-index: 20;
 }
-.cells-cont{
+.cells-cont {
   position: absolute;
   top: 0;
   left: 2rem;
-
 }
-.address-col{
+
+.address-col {
   height: 2rem;
   width: 2rem;
   display: flex;
@@ -136,7 +161,7 @@ body {
   align-items: center;
   border: 1px solid #dfe4ea;
 }
-.address-row{
+.address-row {
   height: 2rem;
   width: 5rem;
   border: 1px solid #dfe4ea;
@@ -144,19 +169,20 @@ body {
   justify-content: center;
   align-items: center;
 }
-.row-cont{
+.row-cont {
   display: flex;
 }
-.cell{
+.cell {
   height: 2rem;
   width: 5rem;
   border: 1px solid #dfe4ea;
   outline: none;
 }
-.color-prop{
+
+.color-prop {
   position: relative;
 }
-.color-prop > input{
+.color-prop > input {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -164,6 +190,3 @@ body {
   height: 100%;
   width: 100%;
 }
-
-
-/* 50:54 */

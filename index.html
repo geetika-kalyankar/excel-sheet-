@@ -6,9 +6,21 @@
     <title>Google Sheet</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="./grid.js" defer></script>
+    <!-- link for cyclec Validation -->
+    <script src="./cycleValidation.js" defer></script>
+
+    <!-- link for sheet funcions -->
+    <script src="./sheetsHandling.js" defer></script>
+
     <script src="./cell-properties.js" defer></script>
+    <!-- Link to trace the cyclic path -->
+    <script src="./cyclicPathTrace.js" defer></script>
     <!-- link for formula scripting -->
-     <script src="./formula.js" defer></script>
+    <script src="./formula.js" defer></script>
+    <!-- link for cut copy paste functions -->
+    <script src="./cutCopyPaste.js" defer></script>
+    <!-- link for open download -->
+     <script src="./openSave.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Icons&display=swap"
       rel="stylesheet"
@@ -18,18 +30,18 @@
   <body>
     <div class="page-actions-cont">
       <div class="page-action">Home</div>
-      <div class="page-action">File</div>
+      <div class="page-action selected-page-action">File</div>
       <div class="page-action">Insert</div>
       <div class="page-action">Layout</div>
       <div class="page-action">Help</div>
     </div>
     <div class="cellprop-actions-cont">
-      <span class="material-icons">
+      <span class="material-icons copy">
         <!-- Changed class here -->
         content_copy
       </span>
-      <span class="material-icons"> content_cut </span>
-      <span class="material-icons"> content_paste </span>
+      <span class="material-icons cut"> content_cut </span>
+      <span class="material-icons paste"> content_paste </span>
       <select class="font-family-prop">
         <option value="monospace">Monospace</option>
         <option value="sans-serif">Sans-Serif</option>
@@ -42,7 +54,7 @@
         <option value="18">18</option>
         <option value="20">20</option>
       </select>
-      <span class="material-icons  bold"> format_bold</span>
+      <span class="material-icons bold"> format_bold</span>
       <span class="material-icons italic"> format_italic</span>
       <span class="material-icons underline"> format_underlined</span>
       <span class="left material-icons alignment"> format_align_left</span>
@@ -50,16 +62,21 @@
       <span class="right material-icons alignment"> format_align_right</span>
       <div class="color-prop">
         <span class="material-icons"> format_color_text </span>
-        <input type="color" class="font-color-prop">
+        <input type="color" class="font-color-prop" />
       </div>
       <div class="color-prop">
         <span class="material-icons"> format_color_fill </span>
-        <input type="color" class="BGcolor-prop">
+        <input type="color" class="BGcolor-prop" />
       </div>
+      <span class="material-icons download">
+        cloud_download
+        </span>
+        <span class="material-icons open">
+          cloud_upload
+          </span>
     </div>
 
-<!-- Formula bar section -->
-
+    <!-- Formula bar section -->
 
     <div class="formula-actions-cont">
       <input type="text" readonly class="address-bar" />
@@ -83,9 +100,7 @@
       <div class="sheet-add-icon">
         <span class="material-icons"> post_add </span>
       </div>
-      <div class="sheets-folder-cont">
-        <div class="sheet-folder">sheet</div>
-      </div>
+      <div class="sheets-folder-cont"></div>
     </div>
   </body>
 </html>
