@@ -23,7 +23,5 @@ This project is created using HTML, CSS, JavaScript, DOM, and Async.
 
 ## 📷 Screenshots:
 
-### Desktop View:
-
-![image](https://github.com/geetika-kalyankar/Front-End-Sites/blob/main/Gaming-Landing-Page/Screenshot/Desktop.png)
+![image](https://github.com/geetika-kalyankar/excel-sheet-/blob/main/output/my-image-name%20(4).png)
 
